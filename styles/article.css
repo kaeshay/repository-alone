@@ -1,0 +1,15 @@
+article {
+	display: grid;
+	/* a column occupies 1 fraction of the frame's width */
+	/* middle column is dynamic between 0 to 8.5in so that on mobile devices there is no extra space */
+	grid-template-columns: 1fr 0.5in [start] minmax(0, 7.5in) [end] 0.5in 1fr; 
+	height: 100vh; /* temp fix */
+	/* padding to top+bottom, no padding on left+right because easier to use CSS grid for flexibility */
+	padding: 0.5in 0; 
+}
+article * { grid-column: start / end; }
+/* media query that allows for dynamic resizing, overrides previous styling*/
+@media (max-width: 8.5in) {
+	/* use percentage instead of fixed width*/
+	article { grid-template-columns:  1fr 5% [start] 90% [end] 5% 1fr; }
+}

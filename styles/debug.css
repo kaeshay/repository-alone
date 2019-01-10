@@ -1,0 +1,15 @@
+/* an element */
+body * {
+	/* !important asserts that no matter what, use these attributes*/
+	color:                    hsla(210, 100%, 100%, 0.88) !important;
+	background:               hsla(210, 100%,  50%, 0.33) !important;
+	outline:    0.25rem solid hsla(210, 100%, 100%, 0.50) !important;
+	box-shadow: none !important;
+}
+
+/* a class is prefixed with a .class*/
+.debug-center {
+	display: flex; /* flexbox is a fast way to position elements inside of a box */
+	justify-content: center; /* center horizontally */
+	align-items: center; /* center vertically */
+}
